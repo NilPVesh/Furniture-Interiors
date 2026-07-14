@@ -2,25 +2,26 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchProducts } from './features/products/productsSlice';
 
 const App = () => {
-  const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
+  const { products, loading } = useSelector(
+    (state) => state.products
+  );
 
   useEffect(() => {
-    fetchProducts();
-  },[]);
+    dispatch(fetchProducts());
+  }, [dispatch]);
 
-  const fetchProducts = async () => {
-    try {
-      const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/products`);
-      setProducts(response.data);
-    } catch (err) {
-      console.error('Error fetching products:', err);
-    }
-  };
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="products-container">
+      <h1>VF Interiors</h1>
       {products.map((product) => (
         <div key={product.id} className="product-card">
           <h2>{product.name}</h2>
