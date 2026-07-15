@@ -20,4 +20,27 @@ const createProduct = async (req, res) => {
     }
 }
 
-module.exports = {getProducts, createProduct};
+const getSingleProduct = async (req, res) => {
+  try {
+    const singleProduct = await product.findById(req.params.id);
+
+    if (!singleProduct) {
+      return res.status(404).json({
+        success: false,
+        message: "Product not found"
+      });
+    }
+
+    res.status(200).json({
+      success: true,
+      data: singleProduct
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message
+    });
+  }
+};
+
+module.exports = {getProducts, createProduct, getSingleProduct};
