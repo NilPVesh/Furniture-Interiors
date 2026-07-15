@@ -1,16 +1,23 @@
-const getProducts = (req, res) => {
-    res.json([
-        {
-            id: 1,
-            name: "Luxury Sofa",
-            price: 45000
-        },
-        {
-            id: 2,
-            name: "Dining Table",
-            price: 35000
-        }
-    ]);
+const product = require("../models/product");
+
+const getProducts = async (req, res) => {
+    const products = await product.find();
+    res.json(products);
 };
 
-module.exports = {getProducts};
+const createProduct = async (req, res) => {
+    try {
+        const products = await product.create(req.body);
+        res.status(201).json({
+            success: true,
+            data: products
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: error.message
+        });
+    }
+}
+
+module.exports = {getProducts, createProduct};

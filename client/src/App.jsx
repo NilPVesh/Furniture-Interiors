@@ -23,7 +23,7 @@ const App = () => {
     <div className="products-container">
       <h1>VF Interiors</h1>
       {products.map((product) => (
-        <div key={product.id} className="product-card">
+        <div key={product._id} className="product-card">
           <h2>{product.name}</h2>
           <p>Price: ₹{product.price}</p>
           <p>Category: {product.category}</p>
