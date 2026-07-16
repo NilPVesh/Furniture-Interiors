@@ -1,0 +1,44 @@
+.footer {
+  background: $color-ink;
+  color: rgba(#fff, 0.78);
+  padding: $space-10 0 $space-6;
+  margin-top: auto;
+}
+
+.grid {
+  display: grid;
+  gap: $space-6;
+  padding-bottom: $space-8;
+  border-bottom: 1px solid rgba(#fff, 0.12);
+
+  @include respond-up(md) {
+    grid-template-columns: 1.4fr 1fr;
+    align-items: end;
+  }
+}
+
+.brand {
+  font-family: $font-display;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: $space-2;
+}
+
+.tagline {
+  color: rgba(#fff, 0.6);
+  font-size: 0.9375rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-4;
+
+  a:hover { color: #fff; }
+}
+
+.copy {
+  margin-top: $space-5;
+  font-size: 0.8125rem;
+  color: rgba(#fff, 0.5);
+}

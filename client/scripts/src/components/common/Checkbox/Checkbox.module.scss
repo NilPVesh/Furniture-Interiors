@@ -1,0 +1,19 @@
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  font-size: 0.9375rem;
+  color: $color-ink-soft;
+  cursor: pointer;
+
+  input {
+    width: 1.05rem;
+    height: 1.05rem;
+    accent-color: $color-walnut;
+  }
+
+  &:has(input:disabled) {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+}

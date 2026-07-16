@@ -1,0 +1,8 @@
+.card {
+  background: $color-surface-raised;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+}
+
+.padded { padding: $space-5; }

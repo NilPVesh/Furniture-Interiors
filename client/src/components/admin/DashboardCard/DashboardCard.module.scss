@@ -1,0 +1,15 @@
+.card { height: 100%; }
+
+.header {
+  @include flex-between;
+  gap: $space-3;
+  margin-bottom: $space-4;
+
+  h3 {
+    font-family: $font-body;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+.body { color: $color-ink-soft; }

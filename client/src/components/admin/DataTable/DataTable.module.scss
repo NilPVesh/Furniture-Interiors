@@ -1,0 +1,13 @@
+.section { width: 100%; }
+
+.toolbar {
+  @include flex-between;
+  gap: $space-3;
+  margin-bottom: $space-4;
+  flex-wrap: wrap;
+
+  h3 {
+    font-family: $font-body;
+    font-size: 1.05rem;
+  }
+}

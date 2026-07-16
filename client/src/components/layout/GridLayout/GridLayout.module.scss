@@ -1,0 +1,24 @@
+.grid {
+  display: grid;
+  width: 100%;
+}
+
+.gapsm { gap: $space-3; }
+.gapmd { gap: $space-5; }
+.gaplg { gap: $space-8; }
+
+.cols1 { grid-template-columns: 1fr; }
+.cols2 {
+  grid-template-columns: 1fr;
+  @include respond-up(md) { grid-template-columns: repeat(2, 1fr); }
+}
+.cols3 {
+  grid-template-columns: 1fr;
+  @include respond-up(sm) { grid-template-columns: repeat(2, 1fr); }
+  @include respond-up(lg) { grid-template-columns: repeat(3, 1fr); }
+}
+.cols4 {
+  grid-template-columns: 1fr;
+  @include respond-up(sm) { grid-template-columns: repeat(2, 1fr); }
+  @include respond-up(lg) { grid-template-columns: repeat(4, 1fr); }
+}

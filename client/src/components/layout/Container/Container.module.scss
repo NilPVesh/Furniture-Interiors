@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: $space-4;
+
+  @include respond-up(md) { padding-inline: $space-6; }
+}
+
+.sm { max-width: $container-sm; }
+.md { max-width: $container-md; }
+.lg { max-width: $container-lg; }
+.xl { max-width: $container-xl; }
+.full { max-width: none; }

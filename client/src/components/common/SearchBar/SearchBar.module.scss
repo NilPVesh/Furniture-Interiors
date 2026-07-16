@@ -1,0 +1,29 @@
+.search {
+  display: flex;
+  width: 100%;
+  max-width: 28rem;
+  border: 1px solid $color-border-strong;
+  border-radius: $radius-md;
+  overflow: hidden;
+  background: $color-surface-raised;
+
+  input {
+    flex: 1;
+    border: none;
+    padding: $space-3 $space-4;
+    background: transparent;
+
+    &:focus { outline: none; }
+  }
+
+  button {
+    border: none;
+    border-left: 1px solid $color-border;
+    padding: $space-3 $space-4;
+    background: $color-walnut-soft;
+    color: $color-walnut;
+    font-weight: 600;
+
+    &:hover { background: #ebe0d6; }
+  }
+}

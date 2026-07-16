@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  margin-bottom: $space-6;
+
+  h1 {
+    font-family: $font-display;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+  }
+
+  p {
+    margin-top: $space-2;
+    color: $color-muted;
+  }
+
+  @include respond-up(md) {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+}

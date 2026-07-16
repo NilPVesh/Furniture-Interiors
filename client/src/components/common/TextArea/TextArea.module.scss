@@ -1,0 +1,34 @@
+.wrapper { width: 100%; }
+
+.textarea {
+  width: 100%;
+  padding: $space-3 $space-4;
+  border: 1px solid $color-border-strong;
+  border-radius: $radius-md;
+  background: $color-surface-raised;
+  color: $color-ink;
+  resize: vertical;
+  min-height: 6rem;
+  transition: border-color $transition-fast, box-shadow $transition-fast;
+
+  &::placeholder { color: $color-muted; }
+
+  &:focus {
+    outline: none;
+    border-color: $color-walnut;
+    box-shadow: 0 0 0 3px rgba($color-walnut, 0.15);
+  }
+
+  &:disabled {
+    background: $color-surface;
+    cursor: not-allowed;
+  }
+}
+
+.hasError { border-color: $color-danger; }
+.errorText {
+  display: block;
+  margin-top: $space-2;
+  font-size: 0.8125rem;
+  color: $color-danger;
+}

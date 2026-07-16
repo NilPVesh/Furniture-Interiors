@@ -1,0 +1,20 @@
+.empty {
+  text-align: center;
+  padding: $space-12 $space-4;
+  border: 1px dashed $color-border-strong;
+  border-radius: $radius-lg;
+  background: $color-surface-raised;
+
+  h3 {
+    margin-bottom: $space-2;
+    font-family: $font-display;
+  }
+
+  p {
+    max-width: 28rem;
+    margin: 0 auto;
+    color: $color-muted;
+  }
+}
+
+.action { margin-top: $space-5; }

@@ -1,0 +1,60 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  border: 1px solid transparent;
+  border-radius: $radius-md;
+  font-family: $font-body;
+  font-weight: 600;
+  line-height: 1.2;
+  transition: background $transition-fast, color $transition-fast, border-color $transition-fast, opacity $transition-fast;
+  white-space: nowrap;
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.sm { padding: $space-2 $space-3; font-size: 0.8125rem; }
+.md { padding: $space-3 $space-5; font-size: 0.9375rem; }
+.lg { padding: $space-4 $space-6; font-size: 1rem; }
+
+.fullWidth { width: 100%; }
+
+.primary {
+  background: $color-walnut;
+  color: #fff;
+  &:hover:not(:disabled) { background: $color-walnut-hover; }
+}
+
+.secondary {
+  background: $color-surface-raised;
+  color: $color-ink;
+  border-color: $color-border-strong;
+  &:hover:not(:disabled) { background: $color-surface; }
+}
+
+.outline {
+  background: transparent;
+  color: $color-walnut;
+  border-color: $color-walnut;
+  &:hover:not(:disabled) { background: $color-walnut-soft; }
+}
+
+.ghost {
+  background: transparent;
+  color: $color-ink-soft;
+  &:hover:not(:disabled) { background: $color-border; color: $color-ink; }
+}
+
+.danger {
+  background: $color-danger;
+  color: #fff;
+  &:hover:not(:disabled) { filter: brightness(0.92); }
+}

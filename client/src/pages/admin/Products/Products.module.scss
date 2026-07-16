@@ -1,0 +1,21 @@
+.page {
+  width: 100%;
+}
+
+.layout {
+  display: grid;
+  gap: $space-5;
+
+  @include respond-up(lg) {
+    grid-template-columns: 16rem 1fr;
+    align-items: start;
+  }
+}
+
+.toolbar {
+  margin-bottom: $space-4;
+}
+
+.pager {
+  margin-top: $space-5;
+}

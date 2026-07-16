@@ -1,0 +1,28 @@
+.card {
+  @include flex-between;
+  gap: $space-4;
+  padding: $space-4 $space-5;
+  background: $color-surface-raised;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  flex-wrap: wrap;
+}
+
+.id {
+  font-weight: 600;
+  color: $color-ink;
+  margin-bottom: $space-1;
+}
+
+.meta { color: $color-muted; font-size: 0.875rem; }
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+}
+
+.total {
+  font-weight: 700;
+  color: $color-ink;
+}

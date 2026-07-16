@@ -1,0 +1,30 @@
+.card {
+  padding: $space-5;
+  background: $color-surface-raised;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+}
+
+.label {
+  font-size: 0.8125rem;
+  color: $color-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: $space-2;
+}
+
+.value {
+  font-family: $font-display;
+  font-size: 2rem;
+  color: $color-ink;
+  line-height: 1;
+}
+
+.hint {
+  margin-top: $space-3;
+  font-size: 0.8125rem;
+  color: $color-muted;
+}
+
+.up { color: $color-success; }
+.down { color: $color-danger; }

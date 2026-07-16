@@ -1,0 +1,25 @@
+.page {
+  width: 100%;
+}
+
+.section {
+  margin-top: $space-8;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+
+  li {
+    @include flex-between;
+    padding-bottom: $space-3;
+    border-bottom: 1px solid $color-border;
+    font-size: 0.9375rem;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+}

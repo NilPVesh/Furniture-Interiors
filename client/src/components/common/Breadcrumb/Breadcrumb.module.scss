@@ -1,0 +1,15 @@
+.breadcrumb {
+  font-size: 0.875rem;
+  color: $color-muted;
+
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-2;
+  }
+
+  a:hover { color: $color-walnut; }
+}
+
+.sep { color: $color-border-strong; }

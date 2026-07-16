@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+.sr-only {
+  @include visually-hidden;
+}
+
+.text-muted {
+  color: $color-muted;
+}
+
+.text-center {
+  text-align: center;
+}

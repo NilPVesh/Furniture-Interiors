@@ -1,0 +1,25 @@
+.layout {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+
+  @include respond-up(lg) {
+    grid-template-columns: $sidebar-width 1fr;
+  }
+}
+
+.sidebar {
+  background: $color-ink;
+  color: #fff;
+
+  @include respond-down(lg) {
+    position: sticky;
+    top: 0;
+    z-index: $z-sticky;
+  }
+}
+
+.content {
+  background: $color-surface;
+  min-width: 0;
+}

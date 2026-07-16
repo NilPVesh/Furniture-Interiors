@@ -1,0 +1,30 @@
+.toast {
+  position: fixed;
+  right: $space-4;
+  bottom: $space-4;
+  z-index: $z-toast;
+  @include flex-between;
+  gap: $space-4;
+  min-width: min(100% - 2rem, 20rem);
+  padding: $space-3 $space-4;
+  border-radius: $radius-md;
+  box-shadow: $shadow-md;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.info { background: $color-info-soft; color: $color-info; border: 1px solid rgba($color-info, 0.2); }
+.success { background: $color-success-soft; color: $color-success; border: 1px solid rgba($color-success, 0.2); }
+.warning { background: $color-warning-soft; color: $color-warning; border: 1px solid rgba($color-warning, 0.2); }
+.error { background: $color-danger-soft; color: $color-danger; border: 1px solid rgba($color-danger, 0.2); }
+
+.close {
+  border: none;
+  background: transparent;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: inherit;
+  opacity: 0.7;
+
+  &:hover { opacity: 1; }
+}

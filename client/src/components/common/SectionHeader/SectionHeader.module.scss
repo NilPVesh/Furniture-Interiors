@@ -1,0 +1,23 @@
+.header {
+  @include flex-between;
+  gap: $space-4;
+  margin-bottom: $space-5;
+  flex-wrap: wrap;
+
+  h2 {
+    font-family: $font-display;
+    font-size: clamp(1.35rem, 2vw, 1.75rem);
+  }
+
+  p {
+    margin-top: $space-1;
+    color: $color-muted;
+    font-size: 0.9375rem;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: $space-3;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,18 @@
+.page {
+  width: 100%;
+}
+
+.section {
+  margin-top: $space-8;
+}
+
+.quickLinks {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+
+  a {
+    color: $color-walnut;
+    font-weight: 600;
+  }
+}

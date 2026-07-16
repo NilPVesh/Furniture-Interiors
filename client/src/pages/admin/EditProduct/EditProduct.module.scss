@@ -1,0 +1,19 @@
+.page {
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  gap: $space-4;
+
+  @include respond-up(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+  margin-top: $space-5;
+}

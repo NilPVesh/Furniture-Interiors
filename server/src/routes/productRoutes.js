@@ -6,7 +6,7 @@ const protect = require('../middleware/authMiddleware');
 const router = express.Router();
 
 router.get('/', protect, getProducts);
-router.post("/", protect, adminOnly, createProduct);
+router.post("/", protect, adminOnly,upload.single("image"), createProduct);
 router.get("/:id", protect, getSingleProduct);
 router.put("/:id", protect, adminOnly, updateProduct);
 router.delete("/:id", protect, adminOnly, deleteProduct);

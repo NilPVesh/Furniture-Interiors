@@ -1,0 +1,23 @@
+.card {
+  background: $color-surface-raised;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  padding: $space-6;
+  box-shadow: $shadow-sm;
+}
+
+.actions {
+  margin-top: $space-5;
+}
+
+.footer {
+  margin-top: $space-5;
+  text-align: center;
+  color: $color-muted;
+  font-size: 0.9375rem;
+
+  a {
+    color: $color-walnut;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,10 @@
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: $color-ink;
+}
+
+.required {
+  margin-left: $space-1;
+  color: $color-danger;
+}

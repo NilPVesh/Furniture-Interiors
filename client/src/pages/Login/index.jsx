@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../../features/auth/authSlice";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
     const dispatch = useDispatch();
-
-    const { loading, error } = useSelector(
+    const navigate = useNavigate();
+    const { loading, error, token } = useSelector(
         (state) => state.auth
     );
 
@@ -32,6 +32,12 @@ const Login = () => {
             })
         );
     };
+
+    useEffect(() => {
+        if(token) {
+            navigate("/products");
+        }
+    },[token])
 
     return (
         <div>

@@ -1,0 +1,100 @@
+.sidebarInner {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: $space-5 $space-4;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  margin-bottom: $space-8;
+  color: #fff;
+}
+
+.brandMark {
+  @include flex-center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: $radius-md;
+  background: $color-walnut;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.brandText {
+  font-family: $font-display;
+  font-size: 1.25rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: $space-1;
+  flex: 1;
+
+  @include respond-down(lg) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $space-2;
+  }
+}
+
+.link {
+  padding: $space-3 $space-4;
+  border-radius: $radius-md;
+  color: rgba(#fff, 0.72);
+  font-weight: 500;
+  font-size: 0.9375rem;
+
+  &:hover {
+    background: rgba(#fff, 0.08);
+    color: #fff;
+  }
+}
+
+.active {
+  background: rgba($color-walnut, 0.9);
+  color: #fff;
+}
+
+.footer {
+  margin-top: $space-6;
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  padding-top: $space-4;
+  border-top: 1px solid rgba(#fff, 0.12);
+
+  @include respond-down(lg) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.storeLink,
+.logout {
+  padding: $space-2 $space-3;
+  border-radius: $radius-md;
+  color: rgba(#fff, 0.7);
+  font-size: 0.875rem;
+  text-align: left;
+  background: transparent;
+  border: none;
+}
+
+.storeLink:hover,
+.logout:hover {
+  color: #fff;
+  background: rgba(#fff, 0.08);
+}
+
+.content {
+  padding: $space-5 $space-4;
+  min-height: 100vh;
+
+  @include respond-up(md) {
+    padding: $space-8 $space-6;
+  }
+}

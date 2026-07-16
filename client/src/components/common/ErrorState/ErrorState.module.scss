@@ -1,0 +1,17 @@
+.error {
+  text-align: center;
+  padding: $space-10 $space-4;
+  border: 1px solid $color-danger;
+  border-radius: $radius-lg;
+  background: $color-danger-soft;
+
+  h3 {
+    margin-bottom: $space-2;
+    color: $color-danger;
+    font-family: $font-display;
+  }
+
+  p { color: $color-ink-soft; max-width: 28rem; margin: 0 auto; }
+}
+
+.action { margin-top: $space-5; }

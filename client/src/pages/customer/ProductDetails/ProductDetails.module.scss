@@ -1,0 +1,30 @@
+.layout {
+  display: grid;
+  gap: $space-8;
+  margin-top: $space-4;
+
+  @include respond-up(lg) {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+  margin-bottom: $space-5;
+  flex-wrap: wrap;
+}
+
+.copy {
+  margin-bottom: $space-6;
+  max-width: 36rem;
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+}
