@@ -1,5 +1,6 @@
 const User = require('../models/userModel');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 const loginUser = async (req, res) => {
     try {
@@ -13,15 +14,14 @@ const loginUser = async (req, res) => {
             return res.status(400).json({ message: 'Invalid credentials' });
         }
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
-        res.status(200).json({ message: 'Login successful',success: true, user, token });
+        res.status(200).json({ message: 'Login successful', success: true, user, token });
     } catch (error) {
+        console.error('Login error:', error.message);
         res.status(500).json({ message: 'Error logging in' });
     }
 };
 
 const registerUser = async (req, res) => {
-    console.log("res", res);
-    console.log("req", req);
     try {
         const { name, email, password } = req.body;
         const existingUser = await User.findOne({ email });
@@ -36,9 +36,9 @@ const registerUser = async (req, res) => {
         });
         res.status(201).json({ message: 'User registered successfully', user: newUser });
     } catch (error) {
+        console.error('Register error:', error.message);
         res.status(500).json({ message: 'Error registering user' });
     }
-
-}
+};
 
 module.exports = { loginUser, registerUser };

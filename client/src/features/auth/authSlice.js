@@ -11,11 +11,23 @@ const initialState = {
 };
 
 export const loginUser = createAsyncThunk("auth/loginUser", async(credentials, { rejectWithValue }) => {
-    return await loginUserCredentials(credentials);
+    try {
+        return await loginUserCredentials(credentials);
+    } catch (error) {
+        return rejectWithValue(
+            error.response?.data?.message || "Login failed"
+        );
+    }
 });
 
-export const registerUser = createAsyncThunk("auth/register", async(credentials) => {
-    return await registerUserCred(credentials);
+export const registerUser = createAsyncThunk("auth/register", async(credentials, { rejectWithValue }) => {
+    try {
+        return await registerUserCred(credentials);
+    } catch (error) {
+        return rejectWithValue(
+            error.response?.data?.message || "Registration failed"
+        );
+    }
 });
 
 const authSlice = createSlice({
